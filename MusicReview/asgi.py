@@ -1,5 +1,5 @@
 """
-ASGI config for PythonClub project.
+ASGI config for a Music review project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PythonClub.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'musicreview.settings')
 
 application = get_asgi_application()
