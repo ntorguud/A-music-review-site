@@ -12,5 +12,5 @@ def index(request):
 def song(request):
     songs_list = Song.objects.all()
     return render(request, 'music/songs.html', {'songs_list': songs_list})
-    
+
     
