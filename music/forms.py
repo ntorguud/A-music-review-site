@@ -1,8 +1,8 @@
 from django import forms
-from .models import Meeting, MeetingMinute, Resource, Event
+from .models import MusicType, Music, Review
 from django.contrib.auth.models import User
 
-class MeetingForm(forms.ModelForm):
+class ReviewForm(forms.ModelForm):
     class Meta:
-        model=Meeting
+        model=Review
         fields='__all__'

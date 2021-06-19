@@ -14,7 +14,7 @@ class MusicType(models.Model):
     class Meta:
         db_table='musictype'
 
-class Song(models.Model):
+class Music(models.Model):
     songname = models.CharField(max_length=255)
     songtype = models.ForeignKey(MusicType, on_delete=models.DO_NOTHING)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
@@ -27,12 +27,12 @@ class Song(models.Model):
         return self.songname
     
     class Meta:
-        db_table='song'
+        db_table='music'
 
 class Review(models.Model):
     title = models.CharField(max_length=255)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    music = models.ForeignKey(Song, on_delete=CASCADE)
+    music = models.ForeignKey(Music, on_delete=CASCADE)
     reviewdate = models.DateField()
     review = models.TextField()
 

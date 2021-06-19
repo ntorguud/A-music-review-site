@@ -1,4 +1,4 @@
-from music.models import Music, Song
+from .models import Music
 from django.shortcuts import render, get_object_or_404
 
 from django.contrib.auth.models import User
@@ -9,8 +9,8 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'music/index.html')
 
-def song(request):
-    songs_list = Song.objects.all()
-    return render(request, 'music/songs.html', {'songs_list': songs_list})
+def music(request):
+    song_list = Music.objects.all()
+    return render(request, 'music/music.html', {'song_list': song_list})
 
     
