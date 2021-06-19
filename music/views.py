@@ -1,3 +1,4 @@
+from music.models import Music, Song
 from django.shortcuts import render, get_object_or_404
 
 from django.contrib.auth.models import User
@@ -7,4 +8,9 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 def index(request):
     return render(request, 'music/index.html')
+
+def song(request):
+    songs_list = Song.objects.all()
+    return render(request, 'music/songs.html', {'songs_list': songs_list})
+    
     
