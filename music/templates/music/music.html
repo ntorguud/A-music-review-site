@@ -3,8 +3,8 @@
 {% load static %}
 <h2>Songs</h2>
 <ul>
-    {% for item in song_list %}
-    <li>{% item.songname %}</li>
+    {% for item in music_list %}
+    <li>{{ item.musicname }}</li>
     {% endfor %}
 </ul>
 

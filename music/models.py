@@ -15,16 +15,16 @@ class MusicType(models.Model):
         db_table='musictype'
 
 class Music(models.Model):
-    songname = models.CharField(max_length=255)
-    songtype = models.ForeignKey(MusicType, on_delete=models.DO_NOTHING)
+    musicname = models.CharField(max_length=255)
+    musictype = models.ForeignKey(MusicType, on_delete=models.DO_NOTHING)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     dateentered = DateField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    songurl = models.URLField()
+    musicurl = models.URLField()
     description = models.TextField()
 
     def __str__(self):
-        return self.songname
+        return self.musicname
     
     class Meta:
         db_table='music'
@@ -41,10 +41,3 @@ class Review(models.Model):
 
     class Meta:
         db_table='review'
-
-
-
-
-
-
-
