@@ -4,5 +4,5 @@ from django.contrib.auth.models import User
 
 class ReviewForm(forms.ModelForm):
     class Meta:
-        model=Review
+        model=Music
         fields='__all__'

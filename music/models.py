@@ -7,6 +7,7 @@ from django.db.models.fields import DateField
 class MusicType(models.Model):
     typename = models.CharField(max_length=255)
     typedescription = models.TextField(null=True, blank=True)
+    music = models.ForeignKey(Music, on_delete=CASCADE)
 
     def __str__(self):
         return self.typename

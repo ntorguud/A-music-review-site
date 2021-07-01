@@ -6,10 +6,3 @@ from .models import MusicType, Music, Review
 admin.site.register(MusicType)
 admin.site.register(Music)
 admin.site.register(Review)
-
-
-
-
-
-
-
